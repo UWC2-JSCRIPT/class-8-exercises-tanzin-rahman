@@ -1,0 +1,3 @@
+//const API_KEY = `j6sQNS2l6EJQq7muKL4TAyh61erICkTN`
+
+const API_KEY = `GlddTXRM6F5TlrCalMB8mTHUQYciQEyF`
