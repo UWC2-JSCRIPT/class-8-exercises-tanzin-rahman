@@ -13,12 +13,12 @@ fetch(url)
   .then((responseJson) => {
     console.log(responseJson)
 
-    let article = responseJson.response.docs[4];
+    let article = responseJson.response.docs[2];
     console.log(article);
 
 
     let a = document.getElementById('article-link');
-    a.href = "https://www.nytimes.com/2022/12/09/sports/autoracing/f1-max-verstappen-red-bull.html"
+    a.href = article.web_url;
 
     const mainHeadline = article.headline.main;
     document.getElementById('article-title').innerText = mainHeadline;
