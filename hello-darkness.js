@@ -1,16 +1,16 @@
-let count = 255;
-const body = document.querySelector('body');
-
-// Change background color every 0.5 second
-// Clear interval if window color is black
-let countdownInterval = setInterval(function () {
-    if (count > 0) {
-        count = count - 1;
-        body.style.backgroundColor = `rgb(${count}, ${count}, ${count})`;
-        console.log(` rgb now: rgb(${count}, ${count}, ${count})`)
-    } else {
-        clearInterval(countdownInterval);
+function reqBackgroundAnimation() {
+    if(count >= 0){
+        color = `rgb(${count}, ${count}, ${count})`;
+        count -= 1;
     }
-}, 500
-);
+    // Render background color
+    
+    body.style.backgroundColor = color;
+    console.log(color);
+    // Fake delay using "setTimeout"
+    setTimeout(reqBackgroundAnimation, 500);
+  }
 
+  let count = 255;
+  let body = document.querySelector('body')
+  window.reqBackgroundAnimation(count);
