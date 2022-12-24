@@ -17,31 +17,49 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <form id="best-books-form">
-          <div class="form-group md-2">
-            <label for="year">Year:</label>
-            <input id="year" name="year" class="form-control" type="text" pattern="\d{4}" placeholder="2019" />
+          <form id="best-books-form">
+              <div class="form-group md-2">
+                <label for="Select date">Publish Date</label>
+                <label>
+                    <input type="date" id ="date" name="publishDate" min="2008-01-01" max="2022-12-31" required />
+                    <span class="validity"></span>
+                </label>
+            </div>
+            <div class="form-group md-2">
+                <label for="Select type">Choose Type:</label>
+                <label>
+                    <select id="type">
+                        <option value="1">Picture Books</option>
+                        <option value="2">Series Books</option>
+                        <option value="3">Hardcover Fiction</option>
+                        <option value="4">Hardcover Nonfiction</option>
+                        <option value="5">Trade Fiction Paperback</option>
+                        <option value="6">Paperback Nonfiction</option>
+                    </select> 
+                    <span class="validity"></span>
+                </label>
           </div>
-          <div class="form-group md-2">
-            <label for="month">Month:</label>
-            <input id="month" name="month" class="form-control" type="text" placeholder="03" pattern="\d{2}" />
-          </div>
-          <div class="form-group md-2">
-            <label for="date">Date:</label>
-            <input id="date" name="date" class="form-control" type="text" placeholder="11" pattern="\d{2}" />
-          </div>
-          <div class="form-group md-2">
+          <div class="form-group md-3">
             <input id="submit" class="btn btn-primary" type="submit" value="Get Books" />
           </div>
         </form>
       </div>
-      <div class="container col-md-8" id="books-container">
+      
+      <div class="container col-md-7" id="books-container">
       </div>
-      <div class="container col-md-2" id="description-container"></div>
+      <div class="container col-md-3" id="description-container"></div>
     </div>
-  </div>
 
-  //
+    <br></br>
+
+    <div id="retrieve" class="form-group md-8">
+      <button id="retrieveAllFavButton" class="btn btn-secondary">Show Favorites</button>
+    </div>
+    <br>
+    <div id="clear" class="form-group md-8">
+      <button id="clearButton">Clear all records</button>
+    </div>
+</div>
   <script src="api-key.js"></script>
   <script src="class.js"></script>
 </body>

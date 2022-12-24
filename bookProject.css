@@ -1,0 +1,23 @@
+label {
+    display: flex;
+    align-items: center;
+}
+
+input:invalid+span::after {
+    content: "✖";
+}
+
+input:valid+span::after {
+    content: "✓";
+}
+
+#description-container {
+    background-color: lightcyan;
+    color: black;
+    position: relative;
+
+}
+
+.book-title {
+    font-size: small;
+}
